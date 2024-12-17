@@ -1,0 +1,3 @@
+SELECT * FROM employees WHERE department = 'Sales' AND salary > 100000; -- This query will fail if the 'salary' column is not of a numeric datatype.  It might work unexpectedly in some DBMS by performing implicit type conversion resulting in wrong results or errors. 
+
+Another example of an uncommon bug is when you expect a certain number of rows back based on a query, but for some reason, your query either returns zero rows or an unexpected high number of rows due to unexpected data in your table. For example, a query on a table with a foreign key constraint might fail due to a referential integrity violation if you've accidentally deleted the row referenced by the foreign key.
